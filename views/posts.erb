@@ -1,0 +1,23 @@
+<h2>Posts</h2>
+
+<div class="content">
+  <ul>
+    <% Post.all.each do |e| %>
+      <li>
+        <a href="<%= url "posts/#{e.id}" %>">
+          <h4><%= e.title %></h4></br></a>
+          <p><%= e.body.truncate(10) || "N/A" %></p>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="sidebar">
+  <h3>Environment</h3>
+  <ul>
+    <li><b>Ruby:</b> <%= RUBY_VERSION %></li>
+    <li><b>Environment:</b> <%= ENV["RACK_ENV"] %></li>
+    <li><b>Server:</b> <%= @env["SERVER_SOFTWARE"] %></li>
+    <li><b>Port:</b> <%= @env["SERVER_PORT"] %></li>
+  </ul>
+</div>

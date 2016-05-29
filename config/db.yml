@@ -1,0 +1,20 @@
+# Sequel Database Configuration
+#
+##EXAMPLE
+# development:
+#   adapter: postgresql
+#   host: localhost
+#   database: blog
+#   user: user
+#   password: password
+
+development:
+  adapter: postgresql
+  host: localhost
+  database: blog
+  user: marekdz
+test:
+  adapter: postgresql
+  host: localhost
+  database: blog
+  user: marekdz
