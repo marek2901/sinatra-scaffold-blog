@@ -6,10 +6,14 @@
       <li>
         <a href="<%= url "posts/#{e.id}" %>">
           <h4><%= e.title %></h4></br></a>
-          <p><%= e.body.truncate(10) || "N/A" %></p>
+          <p><%= e.body.truncate(10) || "N/A" rescue "N/A" %></p>
       </li>
     <% end %>
   </ul>
+
+  <!-- ADD THIS LINE -->
+  <a href="<%= url "/post/new" %>">Create new</a>
+
 </div>
 
 <div class="sidebar">
